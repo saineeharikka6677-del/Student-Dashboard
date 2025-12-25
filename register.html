@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Register Student{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Student Registration</h2>
+    <form method="POST" action="{{ url_for('register') }}">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Select a course</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Civil">Civil</option>
+                <option value="Data Science">Data Science</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Register Student</button>
+        <a href="{{ url_for('home') }}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

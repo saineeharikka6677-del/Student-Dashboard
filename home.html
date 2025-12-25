@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Student Management System{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>Welcome to Student Management System</h1>
+    <p>Manage student records efficiently and effectively</p>
+    <div class="hero-buttons">
+        <a href="{{ url_for('register') }}" class="btn btn-primary">Register Student</a>
+        <a href="{{ url_for('view_students') }}" class="btn btn-secondary">View Students</a>
+    </div>
+</div>
+
+<div class="features">
+    <div class="feature-card">
+        <h3>📝 Easy Registration</h3>
+        <p>Quick and simple student registration process</p>
+    </div>
+    <div class="feature-card">
+        <h3>📊 Student Records</h3>
+        <p>View and manage all student information</p>
+    </div>
+    <div class="feature-card">
+        <h3>🔍 Search & Filter</h3>
+        <p>Find students quickly with powerful search</p>
+    </div>
+</div>
+{% endblock %}
